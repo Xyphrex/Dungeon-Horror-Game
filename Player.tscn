@@ -1,10 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://dafdw6ccr86kq"]
+[gd_scene load_steps=6 format=3 uid="uid://dafdw6ccr86kq"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_iyn6x"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_t8a3x"]
 radius = 0.3
 height = 0.6
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nkuht"]
+points = PackedVector3Array(-0.0818155, -0.282944, 0.0550246, 0.0553153, 0.293338, 0.0277502, 0.055327, 0.293401, -0.0271561, 0.294094, -0.0550432, -0.00884512, -0.0910986, -0.0365365, -0.283058, -0.181357, 0.072674, 0.227371, 0.119011, -0.0182588, 0.274354, -0.283437, 0.0732279, -0.0637529, 0.172949, -0.0636044, -0.23601, 0.118869, -0.273726, -0.0270269, 0.0458236, 0.200293, -0.218248, 0.255703, 0.155047, -0.0179308, -0.126567, -0.217559, -0.162855, -0.217833, -0.14546, 0.14576, -0.172653, 0.236727, -0.0634167, 0.0638922, -0.172616, 0.236565, 0.04576, 0.218242, 0.200313, -0.253973, -0.136212, -0.0814043, 0.217218, 0.126493, 0.162974, 0.218138, -0.145225, 0.145525, -0.162872, 0.226612, 0.109062, -0.180984, 0.099672, -0.217275, -0.0547367, -0.0183455, 0.294059, 0.0458239, -0.200294, -0.218249, 0.217451, 0.126629, -0.162549, -0.282865, 0.0365116, 0.0916363, 0.227173, -0.181499, -0.072254, 0.0553235, 0.0274543, -0.293082, -0.226863, -0.0454326, -0.19054, -0.108312, -0.162947, 0.2266, 0.0639118, -0.263616, 0.127524, -0.027047, 0.136964, 0.265131)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mr87a"]
 radius = 0.3
@@ -30,6 +33,10 @@ light_volumetric_fog_energy = 0.0
 shadow_enabled = true
 spot_range = 10.0
 spot_angle_attenuation = 2.21914
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.93687, 0)
+shape = SubResource("ConvexPolygonShape3D_nkuht")
 
 [node name="Body" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.843746, 0)
