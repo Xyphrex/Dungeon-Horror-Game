@@ -19,7 +19,7 @@ func _ready():
 #	$Camera3D.current = true
 	
 func _process(delta):
-	pass
+	$PlayerGUI/Label.text = "FPS: " + str(1/delta)
 
 func _physics_process(delta):
 	if not is_on_floor():

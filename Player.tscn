@@ -27,14 +27,14 @@ mesh = SubResource("SphereMesh_t8a3x")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.233075)
 visible = false
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Head"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.190473)
+[node name="Torch" type="SpotLight3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0308632, -0.19)
 light_volumetric_fog_energy = 0.0
 shadow_enabled = true
 spot_range = 10.0
 spot_angle_attenuation = 2.21914
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+[node name="headCollision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.93687, 0)
 shape = SubResource("ConvexPolygonShape3D_nkuht")
 
@@ -43,6 +43,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.843746, 0)
 visible = false
 mesh = SubResource("CapsuleMesh_mr87a")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="bodyCollision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.843746, 0)
 shape = SubResource("ConvexPolygonShape3D_4xi2h")
+
+[node name="PlayerGUI" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="PlayerGUI"]
+offset_top = -5.0
+offset_right = 61.0
+offset_bottom = 42.0
+theme_override_font_sizes/font_size = 20
+text = "FPS: "
