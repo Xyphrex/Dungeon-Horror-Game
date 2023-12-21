@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://crxqiy4ohcnw3"]
+[gd_scene load_steps=15 format=3 uid="uid://crxqiy4ohcnw3"]
 
 [ext_resource type="PackedScene" uid="uid://dafdw6ccr86kq" path="res://Player.tscn" id="1_yjrbj"]
 [ext_resource type="MeshLibrary" uid="uid://bm3rh61g35hfq" path="res://tileset.tres" id="2_8mxtg"]
@@ -6,6 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://h8yavxkc6yrx" path="res://Black fairy silent hill breakcore_ idk.mp3" id="4_mrnaa"]
 [ext_resource type="AudioStream" uid="uid://l6h5hg3cou4d" path="res://Baldis basics theme song.mp3" id="5_oksx4"]
 [ext_resource type="PackedScene" uid="uid://55frwcog102e" path="res://rapper.tscn" id="6_p0nyu"]
+[ext_resource type="PackedScene" uid="uid://cik7dof04pw00" path="res://crate.tscn" id="7_omslm"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_chd0w"]
 rayleigh_color = Color(0.431373, 0.435294, 0.392157, 1)
@@ -98,3 +99,12 @@ autoplay = true
 
 [node name="Rapper" parent="." instance=ExtResource("6_p0nyu")]
 transform = Transform3D(0.0982726, 0, -0.490247, 0, 0.5, 0, 0.490247, 0, 0.0982726, 11.0953, 1.57757, -22.3829)
+
+[node name="crate" parent="." instance=ExtResource("7_omslm")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 2.415, 0.480498, 2.0544)
+
+[node name="crate2" parent="." instance=ExtResource("7_omslm")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.33493, 0.589481, 0.966343)
+
+[node name="crate3" parent="." instance=ExtResource("7_omslm")]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 3.71857, 0.48, 0.608625)
